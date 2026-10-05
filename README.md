@@ -47,6 +47,19 @@ It encourages AI to:
 
 It does **not** mean refusing AI-generated code. Delegation is useful when the work is repetitive, low-value, already understood, or when speed matters more than practice.
 
+
+## Context-aware, without becoming a generic study mode
+
+Kangae keeps one core objective: **use AI without outsourcing the thinking that develops your capability.**
+
+It can adapt naturally to three common contexts:
+
+- **Build** — preserve engineering ownership while creating and debugging software.
+- **Study** — preserve active learning through recall, prediction, practice, and progressively stronger guidance.
+- **Review** — preserve judgment through verification, evidence, tradeoffs, and independent evaluation.
+
+These are not separate protocols, and you do not need to manually switch between them. A single session can move between Build, Study, and Review as the work changes.
+
 ## Core idea
 
 > **Use AI aggressively for leverage, but conservatively for cognition.**
