@@ -8,7 +8,7 @@ The goal is simple: use AI for leverage without turning yourself into a passive 
 
 ## How to use Kangae
 
-1. Copy `AI-LEARNING.md` into the root of your project.
+1. Copy `KANGAE.md` into the root of your project.
 2. Tell your AI coding assistant to read and follow it for the session or project.
 3. Work normally. You do not need to manually select assistance levels.
 4. When you get stuck, the AI should gradually increase help.
@@ -18,7 +18,7 @@ Example project:
 
 ```text
 my-project/
-├── AI-LEARNING.md
+├── KANGAE.md
 ├── package.json
 ├── src/
 └── ...
@@ -26,7 +26,7 @@ my-project/
 
 Then tell your AI:
 
-> Read `AI-LEARNING.md` and follow it while we work on this project.
+> Read `KANGAE.md` and follow it while we work on this project.
 
 If your AI tool supports persistent project instructions, you can reference this file from that tool's native instruction file. Kangae itself stays vendor-neutral.
 
@@ -55,7 +55,7 @@ AI should amplify your engineering ability, not become a substitute for developi
 
 ## Protocol
 
-See [AI-LEARNING.md](./AI-LEARNING.md).
+See [KANGAE.md](./KANGAE.md).
 
 ## License
 
