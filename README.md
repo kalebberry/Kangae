@@ -30,6 +30,36 @@ Then tell your AI:
 
 If your AI tool supports persistent project instructions, you can reference this file from that tool's native instruction file. Kangae itself stays vendor-neutral.
 
+
+## Keep Kangae local in a work repository
+
+If you want to use `KANGAE.md` in a company repository without committing it, add it to that repository's local Git exclude file:
+
+```text
+.git/info/exclude
+```
+
+Add:
+
+```text
+KANGAE.md
+CLAUDE.local.md
+```
+
+Then save the file and verify with:
+
+```bash
+git status
+```
+
+If the files are untracked, they should no longer appear in `git status`.
+
+Unlike the project's shared `.gitignore`, `.git/info/exclude` is local to your clone and is not committed or shared with coworkers.
+
+If you only use `KANGAE.md`, you only need to add that one filename.
+
+> Note: ignore rules do not stop Git from tracking a file that has already been committed or added to the index. This setup is intended for files that remain local-only.
+
 ## What Kangae is for
 
 Kangae is designed for developers who want AI assistance without outsourcing the parts of software development they still want to learn and retain.
