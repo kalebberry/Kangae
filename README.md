@@ -90,6 +90,26 @@ It can adapt naturally to three common contexts:
 
 These are not separate protocols, and you do not need to manually switch between them. A single session can move between Build, Study, and Review as the work changes.
 
+
+## Engineering journal
+
+Kangae can also be used to keep a lightweight engineering journal for reflection.
+
+After a meaningful debugging, build, study, or review session, the AI can draft a short entry covering:
+
+- the problem,
+- what you initially thought,
+- what you tried,
+- what the evidence showed,
+- what changed your mind,
+- the decision you made,
+- what you learned,
+- and what you still want to revisit.
+
+The journal is meant for **review and reflection**, not passive logging. You should correct the AI's draft so the final entry reflects your actual understanding.
+
+A suggested template is included in [JOURNAL-TEMPLATE.md](./JOURNAL-TEMPLATE.md).
+
 ## Core idea
 
 > **Use AI aggressively for leverage, but conservatively for cognition.**
