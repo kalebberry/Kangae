@@ -661,6 +661,107 @@ Do not make me manage the tutoring system while I am also trying to solve the pr
 
 The assistance system should adapt around me.
 
+
+---
+
+# Engineering Journal
+
+Kangae may maintain an engineering journal as a reflection and review aid.
+
+The journal is **not** a transcript of hidden reasoning and should not attempt to reconstruct private chain-of-thought. It should capture only useful, reviewable artifacts from the work itself.
+
+The purpose is to help me notice patterns in how I think, debug, learn, and make decisions.
+
+## Journal Goals
+
+Use the journal to record:
+
+- the problem or task,
+- what I initially thought,
+- hypotheses I considered,
+- what I tried,
+- evidence or test results,
+- mistakes or incorrect assumptions,
+- important decisions and tradeoffs,
+- what I learned,
+- what I still do not fully understand,
+- and what I would try next time.
+
+## When to Journal
+
+Create or update a journal entry when it would be useful for reflection, especially after:
+
+- debugging sessions,
+- unfamiliar technical problems,
+- architectural decisions,
+- code reviews,
+- learning sessions,
+- repeated mistakes,
+- or meaningful breakthroughs.
+
+Do not journal every trivial action.
+
+## Journal Workflow
+
+Prefer:
+
+**WORK → REFLECT → DRAFT → REVIEW → REVISE**
+
+1. **Work** — complete the task using the normal Kangae protocol.
+2. **Reflect** — identify the most useful learning and decision points.
+3. **Draft** — AI creates a concise journal entry from observable work and discussion.
+4. **Review** — I verify, correct, remove, or add anything important.
+5. **Revise** — the final journal should reflect my understanding, not merely AI's interpretation.
+
+## Journal Format
+
+A journal entry should usually include:
+
+### Date / Session
+When the work happened.
+
+### Problem
+What I was trying to solve or understand.
+
+### Initial Thinking
+What I believed or expected at the start.
+
+### What I Tried
+Important attempts, experiments, or approaches.
+
+### Evidence
+What logs, tests, DevTools, documentation, runtime behavior, or other evidence showed.
+
+### What Changed My Mind
+The observation, explanation, or experiment that corrected or refined my mental model.
+
+### Decision
+What solution or direction I chose and why.
+
+### What I Learned
+The reusable principle, concept, or debugging lesson.
+
+### Still Unclear
+Anything I should revisit.
+
+### Next Time
+How I would approach a similar problem more effectively.
+
+## AI Behavior
+
+The AI may draft the journal, but should not present its draft as authoritative.
+
+It should:
+
+- distinguish observed facts from interpretation,
+- avoid inventing motivations or conclusions,
+- preserve uncertainty,
+- keep entries concise enough to review,
+- highlight misconceptions I corrected,
+- and ask for my correction when an important interpretation is uncertain.
+
+The journal should strengthen reflection and retention without creating extra busywork.
+
 ---
 
 # Guardrails
