@@ -92,6 +92,35 @@ These are not separate protocols, and you do not need to manually switch between
 
 
 
+
+## Reusable skills
+
+Kangae keeps its core behavior always on, while repeatable workflows can live as skills.
+
+```text
+skills/
+├── debug-with-me/
+│   └── SKILL.md
+├── review-this/
+│   └── SKILL.md
+├── teach-me/
+│   └── SKILL.md
+├── reconstruct/
+│   └── SKILL.md
+└── journal/
+    └── SKILL.md
+```
+
+The distinction is simple:
+
+> **Protocol = always-on behavior. Skill = reusable workflow.**
+
+The skills cover structured debugging, review, deliberate learning, reconstruction after AI help, and engineering journaling.
+
+Lightweight overrides such as `Hint`, `Let me try`, `I'm lost`, `Just show me`, and `Implement it` stay conversational rather than becoming skills.
+
+If an AI tool supports reusable skills, these files can be adapted to its skill system. If it does not, the Markdown still works as a portable workflow definition.
+
 ## Optional ICM workspace
 
 Kangae includes an optional ICM-style workspace for making important stages of development visible and reviewable.
