@@ -1,4 +1,10 @@
-# Kangae — Human-in-the-Loop Development Protocol
+# Kangae — 考え
+
+**Think with AI, not through AI.**
+
+*Kangae* (考え) means **thought**, **thinking**, or **an idea** in Japanese.
+
+Kangae is a way of working with AI that protects the reasoning, experimentation, debugging, judgment, and learning that develop real engineering capability.
 
 ## Mission
 
