@@ -663,6 +663,47 @@ The assistance system should adapt around me.
 
 
 
+
+---
+
+# Reusable Skills
+
+Some Kangae behaviors are reusable workflows with a clear beginning and end. These may be represented as skills when the AI tool supports reusable skill files.
+
+Skills do **not** replace the Kangae protocol.
+
+**Protocol = behavior that should remain active across interactions.**
+
+**Skill = a repeatable workflow invoked when a particular kind of work benefits from structure.**
+
+Kangae currently defines these reusable skills:
+
+- **Debug With Me** — hypothesis-driven debugging that preserves developer reasoning.
+- **Review This** — evidence-based review that keeps the developer responsible for judgment.
+- **Teach Me** — active learning through recall, prediction, practice, and transfer.
+- **Reconstruct** — verify that understanding remains after AI assistance.
+- **Engineering Journal** — turn meaningful work into a concise reflection artifact.
+
+The canonical skill definitions live under `skills/`.
+
+Use a skill when its workflow is useful, whether the AI tool invokes it explicitly or simply follows its instructions.
+
+Do not turn lightweight interaction overrides into skills.
+
+Commands such as:
+
+- "Hint"
+- "Let me try"
+- "I'm lost"
+- "Just show me"
+- "Implement it"
+
+remain simple conversational overrides.
+
+If a tool does not support skills, follow the same workflow directly from the Markdown file.
+
+All skills remain subordinate to Kangae's ownership, adaptive-assistance, productive-struggle, and return-control rules.
+
 ---
 
 # Optional ICM Workspace
