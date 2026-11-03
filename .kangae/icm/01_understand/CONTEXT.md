@@ -8,7 +8,7 @@ Establish a shared and correct model of the problem before solution work begins.
 
 - developer request
 - relevant code, files, tickets, logs, or documentation
-- `KANGAE.md`
+- `.kangae/KANGAE.md`
 - prior ICM artifacts when revisiting this stage
 
 ## Responsibilities
