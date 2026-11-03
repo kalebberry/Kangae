@@ -91,6 +91,38 @@ It can adapt naturally to three common contexts:
 These are not separate protocols, and you do not need to manually switch between them. A single session can move between Build, Study, and Review as the work changes.
 
 
+
+## Optional ICM workspace
+
+Kangae includes an optional ICM-style workspace for making important stages of development visible and reviewable.
+
+```text
+icm/
+├── CONTEXT.md
+├── 01_understand/
+│   └── CONTEXT.md
+├── 02_think/
+│   └── CONTEXT.md
+├── 03_attempt/
+│   └── CONTEXT.md
+├── 04_test/
+│   └── CONTEXT.md
+├── 05_review/
+│   └── CONTEXT.md
+└── 06_reflect/
+    └── CONTEXT.md
+```
+
+The stages roughly map to:
+
+**Understand → Think → Attempt → Test → Review → Reflect**
+
+They are **not a required pipeline**. Use only the stages that add value.
+
+Kangae still controls how the AI collaborates with you; the ICM workspace simply gives that work a visible structure for context, evidence, review, and reflection.
+
+See [icm/CONTEXT.md](./icm/CONTEXT.md) for routing guidance.
+
 ## Engineering journal
 
 Kangae can also be used to keep a lightweight engineering journal for reflection.
