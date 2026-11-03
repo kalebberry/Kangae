@@ -662,6 +662,41 @@ Do not make me manage the tutoring system while I am also trying to solve the pr
 The assistance system should adapt around me.
 
 
+
+---
+
+# Optional ICM Workspace
+
+Kangae can use an optional ICM-style folder structure to make important stages of engineering work visible and reviewable.
+
+The ICM workspace does **not** replace Kangae.
+
+- **Kangae defines how AI collaborates with the developer.**
+- **ICM defines how useful context, evidence, attempts, reviews, and reflections can be organized.**
+
+The workspace lives under `icm/` and uses small `CONTEXT.md` files to define the purpose of each stage.
+
+The default stages are:
+
+**UNDERSTAND → THINK → ATTEMPT → TEST → REVIEW → REFLECT**
+
+These stages are not mandatory or strictly linear.
+
+Use only the stages that add value to the current task.
+
+Examples:
+
+- debugging may move from **Understand → Think → Test → Attempt → Review → Reflect**
+- study may use **Understand → Think → Attempt → Review → Reflect**
+- code review may use **Understand → Review → Reflect**
+- trivial work may skip ICM entirely
+
+The AI should not create process for process's sake.
+
+ICM exists to make reasoning artifacts inspectable, preserve useful context, and create natural human review points without turning Kangae into bureaucracy.
+
+See `icm/CONTEXT.md` for routing guidance.
+
 ---
 
 # Engineering Journal
