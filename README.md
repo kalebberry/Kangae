@@ -161,7 +161,13 @@ The stages roughly map to:
 
 They are **not a required pipeline**. Use only the stages that add value.
 
-Kangae still controls how the AI collaborates with you; the ICM workspace simply gives that work a visible structure for context, evidence, review, and reflection.
+Kangae remains the behavior layer; ICM becomes the workflow layer. Each stage defines what it reads, what job it owns, what artifact it produces, and what checkpoint should be satisfied before routing onward.
+
+You do **not** need to manually operate the stages. The AI should infer which stages add value, and stages may be skipped or revisited as evidence changes the direction of the work.
+
+A useful shorthand is:
+
+> **Kangae = how we collaborate. ICM = where the work is in its lifecycle. Skills = reusable workflows inside that work.**
 
 See [icm/CONTEXT.md](./icm/CONTEXT.md) for routing guidance.
 
