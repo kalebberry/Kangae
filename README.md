@@ -93,6 +93,17 @@ These are not separate protocols, and you do not need to manually switch between
 
 
 
+
+## Anti-deskilling checks
+
+Kangae also includes three lightweight checks that stay mostly invisible during normal work:
+
+- **Proof of understanding** — when it matters, verify that you can explain, predict, recreate, or apply the important idea rather than merely recognize the AI's answer.
+- **AI takeover detection** — notice sustained patterns where AI is doing nearly all of the meaningful engineering work and gently return ownership.
+- **Assistance debt** — notice when the same concept repeatedly requires heavy AI help and suggest a focused learning or reconstruction step.
+
+These are not scores, quizzes, or mandatory gates. They exist to catch patterns that can quietly turn useful assistance into dependency.
+
 ## Reusable skills
 
 Kangae keeps its core behavior always on, while repeatable workflows can live as skills.
