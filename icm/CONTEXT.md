@@ -1,46 +1,81 @@
 # Kangae ICM Context
 
-Kangae remains the governing protocol.
+Kangae remains the governing behavior layer.
 
-This ICM workspace exists to make the development process visible, inspectable, and easier to review without turning every task into a rigid pipeline.
+This ICM workspace is the workflow layer: it makes meaningful engineering work visible through small, inspectable stage contracts and artifacts.
 
-## Core rule
+## Relationship to Kangae
 
-Use only the stages that add reasoning, evidence, review, or reflection value.
+Use this model:
 
-Do not force every task through every stage.
+- **Kangae = HOW the AI collaborates with the developer**
+- **ICM = WHAT stage of work is active and what artifact that stage should produce**
+- **Skills = reusable workflows that may run inside a stage**
 
-The developer remains the owner of the solution.
+ICM must never override Kangae's ownership, adaptive-assistance, productive-struggle, proof-of-understanding, or return-control rules.
+
+The developer should not have to manage this routing manually. The AI should infer useful stages from the task.
+
+## Stage contract
+
+Each stage defines:
+
+1. **Purpose** — the single job of the stage.
+2. **Reads** — the context or artifacts it may consume.
+3. **Responsibilities** — what belongs in this stage.
+4. **Produces** — the artifact it should create or update.
+5. **Checkpoint** — what should be true before routing onward.
+6. **Routes to** — likely next stages.
+
+A stage output is a working artifact, not authoritative truth.
+
+The developer may correct, reject, replace, or skip an artifact at any time.
 
 ## Stage map
 
-- `01_understand` — clarify the problem
-- `02_think` — form hypotheses and mental models
-- `03_attempt` — capture the developer's proposed implementation or approach
-- `04_test` — gather evidence and validate assumptions
-- `05_review` — evaluate the result and tradeoffs
-- `06_reflect` — capture reusable learning in the engineering journal
+- `01_understand` — establish a shared problem model
+- `02_think` — form hypotheses, options, and predictions
+- `03_attempt` — capture a proposed change or implementation
+- `04_test` — gather evidence and interpret results
+- `05_review` — evaluate correctness, quality, and tradeoffs
+- `06_reflect` — capture reusable learning when worthwhile
 
-## Routing guidance
+## Routing examples
 
-A debugging task might use:
+Debugging commonly uses:
 
 `01_understand → 02_think → 04_test → 03_attempt → 05_review → 06_reflect`
 
-A study task might use:
+Build work commonly uses:
+
+`01_understand → 02_think → 03_attempt → 04_test → 05_review`
+
+Study work commonly uses:
 
 `01_understand → 02_think → 03_attempt → 05_review → 06_reflect`
 
-A review task might use:
+Review work commonly uses:
 
 `01_understand → 05_review → 06_reflect`
 
-A trivial task may skip the ICM workspace entirely.
+These are examples, not mandatory pipelines.
+
+Stages may be revisited. For example, new test evidence may route back to Think or Understand.
+
+A trivial task may skip ICM entirely.
+
+## Routing rule
+
+Route based on the next useful artifact, not on stage numbers.
+
+Do not advance merely because a file was written.
+
+Advance when the current stage's checkpoint is satisfied and another stage would add value.
 
 ## Human checkpoints
 
-The AI should pause at meaningful boundaries when human correction or judgment would improve the result.
+Use human review where judgment, correction, learning, or ownership benefits from it.
 
-Outputs are working artifacts, not authoritative truth.
+Kangae determines how much assistance to provide at those checkpoints.
 
-The developer may edit, reject, or replace them at any time.
+Do not create ceremony for low-value work.
