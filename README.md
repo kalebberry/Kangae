@@ -10,57 +10,73 @@ The goal is simple: use AI for leverage without turning yourself into a passive 
 
 ## How to use Kangae
 
-1. Copy `KANGAE.md` into the root of your project.
-2. Tell your AI coding assistant to read and follow it for the session or project.
-3. Work normally. You do not need to manually select assistance levels.
-4. When you get stuck, the AI should gradually increase help.
-5. When you regain understanding and momentum, the AI should return control to you.
+Kangae is packaged as one portable folder:
 
-Example project:
+```text
+.kangae/
+├── KANGAE.md
+├── JOURNAL-TEMPLATE.md
+├── skills/
+│   ├── debug-with-me/
+│   ├── review-this/
+│   ├── teach-me/
+│   ├── reconstruct/
+│   └── journal/
+└── icm/
+    ├── CONTEXT.md
+    ├── 01_understand/
+    ├── 02_think/
+    ├── 03_attempt/
+    ├── 04_test/
+    ├── 05_review/
+    └── 06_reflect/
+```
+
+To use it in a project:
+
+1. Copy the entire `.kangae/` folder into the project root.
+2. Tell your AI coding assistant:
+
+> Read `.kangae/KANGAE.md` and follow Kangae while we work.
+
+3. Work normally. Kangae handles adaptive assistance, skills, and optional ICM routing without requiring you to manage them manually.
+
+Example:
 
 ```text
 my-project/
-├── KANGAE.md
+├── .kangae/
+│   ├── KANGAE.md
+│   ├── JOURNAL-TEMPLATE.md
+│   ├── skills/
+│   └── icm/
 ├── package.json
-├── src/
-└── ...
+└── src/
 ```
 
-Then tell your AI:
+If your AI tool supports persistent project instructions, point its native instruction file at `.kangae/KANGAE.md`. This keeps Kangae itself vendor-neutral.
 
-> Read `KANGAE.md` and follow it while we work on this project.
+### Keep Kangae local in a work repository
 
-If your AI tool supports persistent project instructions, you can reference this file from that tool's native instruction file. Kangae itself stays vendor-neutral.
-
-
-## Keep Kangae local in a work repository
-
-If you want to use `KANGAE.md` in a company repository without committing it, add it to that repository's local Git exclude file:
+If you want Kangae available locally without committing it to a company repository, add this to:
 
 ```text
 .git/info/exclude
 ```
 
-Add:
-
 ```text
-KANGAE.md
-CLAUDE.local.md
+.kangae/
 ```
 
-Then save the file and verify with:
+Then verify with:
 
 ```bash
 git status
 ```
 
-If the files are untracked, they should no longer appear in `git status`.
+Unlike the project's shared `.gitignore`, `.git/info/exclude` stays local to your clone.
 
-Unlike the project's shared `.gitignore`, `.git/info/exclude` is local to your clone and is not committed or shared with coworkers.
-
-If you only use `KANGAE.md`, you only need to add that one filename.
-
-> Note: ignore rules do not stop Git from tracking a file that has already been committed or added to the index. This setup is intended for files that remain local-only.
+> Ignore rules do not untrack files that are already committed or staged.
 
 ## What Kangae is for
 
@@ -111,7 +127,7 @@ These are not scores, quizzes, or mandatory gates. They exist to catch patterns 
 Kangae keeps its core behavior always on, while repeatable workflows can live as skills.
 
 ```text
-skills/
+.kangae/skills/
 ├── debug-with-me/
 │   └── SKILL.md
 ├── review-this/
@@ -139,7 +155,7 @@ If an AI tool supports reusable skills, these files can be adapted to its skill 
 Kangae includes an optional ICM-style workspace for making important stages of development visible and reviewable.
 
 ```text
-icm/
+.kangae/icm/
 ├── CONTEXT.md
 ├── 01_understand/
 │   └── CONTEXT.md
@@ -169,7 +185,7 @@ A useful shorthand is:
 
 > **Kangae = how we collaborate. ICM = where the work is in its lifecycle. Skills = reusable workflows inside that work.**
 
-See [icm/CONTEXT.md](./icm/CONTEXT.md) for routing guidance.
+See [.kangae/icm/CONTEXT.md](./.kangae/icm/CONTEXT.md) for routing guidance.
 
 ## Engineering journal
 
@@ -188,7 +204,7 @@ After a meaningful debugging, build, study, or review session, the AI can draft 
 
 The journal is meant for **review and reflection**, not passive logging. You should correct the AI's draft so the final entry reflects your actual understanding.
 
-A suggested template is included in [JOURNAL-TEMPLATE.md](./JOURNAL-TEMPLATE.md).
+A suggested template is included in [.kangae/JOURNAL-TEMPLATE.md](./.kangae/JOURNAL-TEMPLATE.md).
 
 ## Core idea
 
@@ -198,7 +214,7 @@ AI should amplify your engineering ability, not become a substitute for developi
 
 ## Protocol
 
-See [KANGAE.md](./KANGAE.md).
+See [.kangae/KANGAE.md](./.kangae/KANGAE.md).
 
 ## License
 
