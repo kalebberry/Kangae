@@ -9,7 +9,7 @@ Develop the next useful mental model, hypothesis, or solution direction.
 - `../01_understand/output/problem.md` when available
 - relevant source code or documentation
 - prior evidence or attempts when revisiting
-- `KANGAE.md`
+- `.kangae/KANGAE.md`
 
 ## Responsibilities
 
