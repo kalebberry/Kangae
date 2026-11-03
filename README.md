@@ -1,8 +1,10 @@
-# Kangae
+# Kangae — 考え
 
 **Think with AI, not through AI.**
 
-Kangae is a human-first development protocol for working with AI without giving up the reasoning, debugging, experimentation, and decision-making that build engineering skill.
+*Kangae* (考え) means **thought**, **thinking**, or **an idea** in Japanese.
+
+Kangae is a way of working with AI that protects the reasoning, debugging, experimentation, judgment, and learning that build real engineering capability.
 
 The goal is simple: use AI for leverage without turning yourself into a passive reader of generated solutions.
 
