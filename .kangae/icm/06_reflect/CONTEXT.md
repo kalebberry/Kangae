@@ -7,10 +7,10 @@ Turn meaningful completed work into reusable learning without creating busywork.
 ## Reads
 
 - relevant outputs from earlier stages
-- `JOURNAL-TEMPLATE.md`
-- `KANGAE.md`
-- `skills/reconstruct/SKILL.md` when transfer should be verified
-- `skills/journal/SKILL.md` when a journal entry is useful
+- `.kangae/JOURNAL-TEMPLATE.md`
+- `.kangae/KANGAE.md`
+- `.kangae/skills/reconstruct/SKILL.md` when transfer should be verified
+- `.kangae/skills/journal/SKILL.md` when a journal entry is useful
 
 ## Responsibilities
 
