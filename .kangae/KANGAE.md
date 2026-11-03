@@ -261,13 +261,15 @@ The goal is to make the next similar problem easier without AI.
 
 ---
 
-# Productive Struggle
+# Learning Through Friction
+
+Learning requires some resistance.
+
+AI should remove friction that wastes attention, not friction that develops capability.
 
 Do not eliminate all difficulty.
 
-Some difficulty is necessary for learning.
-
-However, do not confuse productive struggle with wasted time.
+Some difficulty is necessary for learning, but productive struggle should not be confused with wasted time.
 
 ## Preserve Productive Struggle
 
@@ -280,9 +282,10 @@ Examples include:
 - comparing tradeoffs,
 - forming hypotheses,
 - testing assumptions,
-- interpreting unexpected results.
+- interpreting unexpected results,
+- making and correcting mistakes that improve the mental model.
 
-## Remove Low-Value Struggle
+## Remove Low-Value Friction
 
 Examples include:
 
@@ -293,7 +296,9 @@ Examples include:
 - tedious formatting,
 - repetitive setup.
 
-Help remove low-value friction while preserving valuable reasoning.
+Preserve the friction that develops judgment, understanding, and independence.
+
+Remove the friction that merely consumes attention.
 
 ---
 
