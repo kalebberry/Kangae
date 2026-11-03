@@ -9,8 +9,8 @@ Evaluate the current reasoning, implementation, and tradeoffs before considering
 - relevant problem, hypotheses, attempt, and evidence artifacts
 - current implementation
 - requirements or acceptance criteria
-- `KANGAE.md`
-- `skills/review-this/SKILL.md` when applicable
+- `.kangae/KANGAE.md`
+- `.kangae/skills/review-this/SKILL.md` when applicable
 
 ## Responsibilities
 
