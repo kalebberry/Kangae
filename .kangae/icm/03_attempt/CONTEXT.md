@@ -8,7 +8,7 @@ Create or capture the next meaningful implementation, change, experiment, or sol
 
 - relevant outputs from Understand, Think, or Test
 - relevant code and files
-- `KANGAE.md`
+- `.kangae/KANGAE.md`
 - applicable skill instructions
 
 ## Responsibilities
