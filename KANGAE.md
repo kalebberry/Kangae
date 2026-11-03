@@ -806,33 +806,44 @@ All skills remain subordinate to Kangae's ownership, adaptive-assistance, produc
 
 # Optional ICM Workspace
 
-Kangae can use an optional ICM-style folder structure to make important stages of engineering work visible and reviewable.
+Kangae can use an optional ICM workspace to make meaningful engineering work visible through small, inspectable stage contracts.
 
-The ICM workspace does **not** replace Kangae.
+The systems have separate responsibilities:
 
-- **Kangae defines how AI collaborates with the developer.**
-- **ICM defines how useful context, evidence, attempts, reviews, and reflections can be organized.**
+- **Kangae = HOW the AI collaborates with the developer.**
+- **ICM = WHAT stage of work is active and what artifact that stage produces.**
+- **Skills = reusable workflows that may run inside a stage.**
 
-The workspace lives under `icm/` and uses small `CONTEXT.md` files to define the purpose of each stage.
+Kangae remains the governing behavior layer across every ICM stage.
+
+Each `icm/*/CONTEXT.md` defines a stage contract:
+
+1. purpose,
+2. inputs it reads,
+3. responsibilities,
+4. artifact it produces,
+5. checkpoint for moving on,
+6. likely next stages.
+
+The AI should infer useful routing from the task. The developer should not need to manually operate the stage system.
 
 The default stages are:
 
 **UNDERSTAND → THINK → ATTEMPT → TEST → REVIEW → REFLECT**
 
-These stages are not mandatory or strictly linear.
+They are not a mandatory linear pipeline.
 
-Use only the stages that add value to the current task.
+For example:
 
-Examples:
-
-- debugging may move from **Understand → Think → Test → Attempt → Review → Reflect**
-- study may use **Understand → Think → Attempt → Review → Reflect**
-- code review may use **Understand → Review → Reflect**
+- debugging may use **Understand → Think → Test → Attempt → Review → Reflect**
+- build work may use **Understand → Think → Attempt → Test → Review**
+- review work may use **Understand → Review → Reflect**
+- evidence may route work backward from **Test → Think** or **Test → Understand**
 - trivial work may skip ICM entirely
 
-The AI should not create process for process's sake.
+Move between stages because the next artifact adds value, not simply because the previous stage number is complete.
 
-ICM exists to make reasoning artifacts inspectable, preserve useful context, and create natural human review points without turning Kangae into bureaucracy.
+Human review should happen at meaningful boundaries, while Kangae determines how much help, questioning, implementation, or teaching is appropriate inside each stage.
 
 See `icm/CONTEXT.md` for routing guidance.
 
