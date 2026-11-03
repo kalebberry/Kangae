@@ -9,7 +9,7 @@ Use evidence to validate or falsify a hypothesis, attempt, or assumption.
 - relevant hypotheses from `../02_think/output/hypotheses.md`
 - relevant attempt from `../03_attempt/output/attempt.md`
 - code, tests, logs, DevTools output, runtime behavior, documentation, or reproductions
-- `KANGAE.md`
+- `.kangae/KANGAE.md`
 
 ## Responsibilities
 
