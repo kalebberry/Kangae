@@ -1,32 +1,49 @@
 # Stage 02 — Think
 
-## Goal
+## Purpose
 
-Help the developer form a useful mental model and candidate hypotheses.
+Develop the next useful mental model, hypothesis, or solution direction.
 
-## Inputs
+## Reads
 
-- `../01_understand/output/problem.md`
-- relevant code
+- `../01_understand/output/problem.md` when available
+- relevant source code or documentation
+- prior evidence or attempts when revisiting
 - `KANGAE.md`
 
-## Process
+## Responsibilities
 
-Prefer questions, predictions, and small hints first.
-
-Let the developer propose explanations where practical.
-
-Increase assistance only when signs of confusion or blockage appear.
-
-Record:
+Identify and refine:
 
 - plausible hypotheses
+- candidate approaches
 - assumptions
-- expected behavior
-- what evidence could confirm or reject each idea
+- tradeoffs
+- predictions
+- evidence that would confirm or reject an idea
 
-## Output
+Kangae applies here: let the developer reason first when that has learning value. Use questions, hints, explanations, or structure according to adaptive assistance.
 
-Write useful hypotheses to:
+Do not generate a large option dump when one focused next question would be more useful.
+
+## Produces
 
 `output/hypotheses.md`
+
+This may contain hypotheses, candidate approaches, or both depending on the task.
+
+## Checkpoint
+
+Before routing onward, there should be at least one useful next direction with a reason to pursue it.
+
+For debugging, the developer should ideally know what result would support or weaken the current hypothesis.
+
+For design work, the important tradeoff should be visible.
+
+## Routes to
+
+Usually:
+
+- `04_test` when evidence should come before implementation
+- `03_attempt` when there is enough confidence to try a solution
+- `01_understand` when thinking reveals that the problem model is incomplete
