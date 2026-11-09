@@ -23,6 +23,8 @@ Kangae is packaged as one portable folder:
 │   ├── reconstruct/
 │   ├── journal/
 │   └── understand-code/
+├── domains/
+│   └── language-learning/
 └── icm/
     ├── CONTEXT.md
     ├── 01_understand/
@@ -154,6 +156,29 @@ Skills are inferred from natural language. You do not need to remember or invoke
 Lightweight overrides such as `Hint`, `Let me try`, `I'm lost`, `Just show me`, and `Implement it` stay conversational rather than becoming skills.
 
 If an AI tool supports reusable skills, these files can be adapted to its skill system. If it does not, the Markdown still works as a portable workflow definition.
+
+
+## Optional domains
+
+Kangae can also apply its core philosophy outside software development through small optional domain packs.
+
+The first domain is **Language Learning**:
+
+```text
+.kangae/domains/
+└── language-learning/
+    ├── CONTEXT.md
+    ├── understand-sentence.md
+    ├── practice-grammar.md
+    ├── recall-vocab.md
+    └── conversation-practice.md
+```
+
+It uses the same Kangae ideas—adaptive assistance, learning through friction, proof of understanding, and return control—but applies them to recall, comprehension, grammar, vocabulary, and conversation.
+
+For example, "help me understand this Japanese sentence" should let you attempt the meaning before revealing a translation, while "let's practice Japanese conversation" should preserve conversational flow and correct selectively.
+
+You do not need to invoke the domain or workflow by name.
 
 ## Optional ICM workspace
 
