@@ -812,6 +812,27 @@ If a tool does not support skills, follow the same workflow directly from the Ma
 
 All skills remain subordinate to Kangae's ownership, adaptive-assistance, productive-struggle, and return-control rules.
 
+
+---
+
+# Optional Domains
+
+Kangae's core principles can be applied outside software development through optional domain packs.
+
+A domain pack adds context-specific workflows without changing the core protocol.
+
+The AI should infer the relevant domain from natural language when a matching domain is available.
+
+Current domains:
+
+- **Language Learning** — preserve recall, comprehension, production, and learning-through-friction while using AI as adaptive support.
+
+For language-learning tasks, read and follow:
+
+`.kangae/domains/language-learning/CONTEXT.md`
+
+Domain packs remain subordinate to Kangae's adaptive assistance, learning-through-friction, proof-of-understanding, and return-control principles.
+
 ---
 
 # Optional ICM Workspace
