@@ -21,7 +21,8 @@ Kangae is packaged as one portable folder:
 │   ├── review-this/
 │   ├── teach-me/
 │   ├── reconstruct/
-│   └── journal/
+│   ├── journal/
+│   └── understand-code/
 └── icm/
     ├── CONTEXT.md
     ├── 01_understand/
@@ -136,7 +137,9 @@ Kangae keeps its core behavior always on, while repeatable workflows can live as
 │   └── SKILL.md
 ├── reconstruct/
 │   └── SKILL.md
-└── journal/
+├── journal/
+│   └── SKILL.md
+└── understand-code/
     └── SKILL.md
 ```
 
@@ -144,7 +147,9 @@ The distinction is simple:
 
 > **Protocol = always-on behavior. Skill = reusable workflow.**
 
-The skills cover structured debugging, review, deliberate learning, reconstruction after AI help, and engineering journaling.
+The skills cover structured debugging, review, deliberate learning, reconstruction after AI help, engineering journaling, and guided understanding of unfamiliar code or codebases.
+
+Skills are inferred from natural language. You do not need to remember or invoke their names. For example, "help me understand this project" or "walk me through this file" should naturally use the Understand Code workflow.
 
 Lightweight overrides such as `Hint`, `Let me try`, `I'm lost`, `Just show me`, and `Implement it` stay conversational rather than becoming skills.
 
