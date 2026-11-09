@@ -786,10 +786,15 @@ Kangae currently defines these reusable skills:
 - **Teach Me** — active learning through recall, prediction, practice, and transfer.
 - **Reconstruct** — verify that understanding remains after AI assistance.
 - **Engineering Journal** — turn meaningful work into a concise reflection artifact.
+- **Understand Code** — build a usable mental model of a file, feature, subsystem, or codebase through guided exploration.
 
 The canonical skill definitions live under `.kangae/skills/` when installed in a project.
 
 Use a skill when its workflow is useful, whether the AI tool invokes it explicitly or simply follows its instructions.
+
+When a reusable workflow matches the developer's intent, the AI should infer it naturally from the request and follow the corresponding file under `.kangae/skills/`.
+
+The developer should not need to remember skill names or invoke commands. For example, requests such as "help me understand this codebase" or "what is this file doing?" should naturally use the Understand Code workflow.
 
 Do not turn lightweight interaction overrides into skills.
 
