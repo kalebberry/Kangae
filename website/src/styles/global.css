@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=WDXL+Lubrifont+JP+N&display=swap');
 /* Kangae typography: rem-based, fluid, and responsive to browser font settings. */
 :root {
   --type-xs: 0.6875rem;
@@ -114,3 +114,9 @@ h1, h2, h3 { text-wrap: balance; }
 #main-content:focus{outline:none}
 .site-header nav a{display:inline-flex;align-items:center;min-height:2.75rem}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}}
+
+/* Studio Eien family: Japanese glyphs use WDXL Lubrifont JP N. */
+:lang(ja), .brand-kanji, .japanese {
+  font-family: 'WDXL Lubrifont JP N', sans-serif;
+  font-synthesis: none;
+}
