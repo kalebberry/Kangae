@@ -5,8 +5,108 @@ import Layout from '../layouts/Layout.astro';
 <section class="wrap product-hero"><span class="section-tag">KANGAE / THE WORKFLOW</span><div class="product-heading"><h1>Assistance without<br /><em>autopilot.</em></h1><p>Kangae is not another AI model or coding app. It's a portable set of Markdown instructions that changes how you collaborate with the AI tools you already use.</p></div></section>
 <section class="wrap section-pad product-divider"><div class="section-top"><span class="section-tag">01 / HOW IT WORKS</span><span class="tiny">A CONVERSATION, NOT A CHECKLIST</span></div><div class="steps"><article><span class="number">01 / NOTICE</span><h2>Start with what you know.</h2><p>State the problem, make a prediction, or ask a question. Kangae encourages the assistant to build on your reasoning rather than immediately replacing it.</p></article><article><span class="number">02 / EXPLORE</span><h2>Work through the uncertainty.</h2><p>Get hints, examine evidence, debug together, or request direct implementation when that makes sense.</p></article><article><span class="number">03 / OWN</span><h2>Leave with understanding.</h2><p>Verify the result, explain the important decision, and capture a reflection when it's useful. No mandatory quizzes or rigid gates.</p></article></div></section>
 <section class="dark-section"><div class="wrap"><div class="section-top"><span class="section-tag">02 / IN PRACTICE</span><span class="tiny">AN ILLUSTRATIVE EXCHANGE</span></div><div class="example-grid"><div><h2>The answer is not<br />always the lesson.</h2><p>Rather than immediately replacing your work with a finished solution, Kangae can help you inspect the problem first. You can still say “Just show me” when speed matters.</p></div><div class="terminal"><div class="terminal-top">EXAMPLE / DEBUG WITH ME <span>● ● ●</span></div><div class="terminal-line"><b>YOU</b><p>My grid breaks at a narrow width. Fix it?</p></div><div class="terminal-line"><b>ASSISTANT</b><p>First, what do you expect the columns to do when the container shrinks? Let's inspect the minimum track size.</p></div><div class="terminal-line"><b>YOU</b><p>I think the minimum width is preventing them from shrinking.</p></div><div class="terminal-line"><b>ASSISTANT</b><p>Good hypothesis. How could we test it before changing the layout?</p></div></div></div></div></section>
-<section class="wrap section-pad"><div class="section-top"><span class="section-tag">03 / INSIDE KANGAE</span><span class="tiny">SMALL PARTS, OPTIONAL DEPTH</span></div><div class="principles"><article><span class="number">CORE</span><h3>Adaptive guidance</h3><p>Build, Study, and Review are contexts the assistant can move between naturally.</p></article><article><span class="number">SKILLS</span><h3>Reusable practices</h3><p>Understand code, debug, review, reconstruct, teach, and journal.</p></article><article><span class="number">OPTIONAL</span><h3>Structured reflection</h3><p>Use ICM stages or a learning domain when they add value, without making them mandatory.</p></article></div></section>
-<section class="wrap install-section"><div><span class="section-tag">04 / GET STARTED</span><h2>One folder.<br />Your existing tools.</h2><p>Copy the <code>.kangae/</code> folder into your project and point your AI assistant at its instructions. You can keep it local to your clone without editing shared team instructions.</p><a class="text-link" href="https://github.com/kalebberry/Kangae#how-to-use-kangae">Read the full setup guide ↗</a></div><div class="terminal"><div class="terminal-top">PROJECT STRUCTURE</div><pre><code>my-project/
+<section class="wrap section-pad compare-section" aria-labelledby="compare-title">
+  <div class="section-top"><span class="section-tag">03 / TRY THE DIFFERENCE</span><span class="tiny">A GUIDED, STATIC DEMONSTRATION</span></div>
+  <div class="compare-intro"><h2 id="compare-title">Same problem.<br /><em>Different relationship.</em></h2><p>Choose a situation, then switch between a direct-answer response and a Kangae-guided exchange. These are illustrative examples—not a live AI chat. Kangae can still give you the direct answer when you ask.</p></div>
+  <div class="compare-tool" data-comparison>
+    <div class="compare-controls">
+      <div class="compare-field"><span class="compare-label" id="scenario-label">01 / CHOOSE A SCENARIO</span><div class="compare-options" role="group" aria-labelledby="scenario-label"><button type="button" data-scenario="grid" aria-pressed="true">Responsive grid</button><button type="button" data-scenario="bug" aria-pressed="false">Debug a function</button></div></div>
+      <div class="compare-field"><span class="compare-label" id="approach-label">02 / CHOOSE AN APPROACH</span><div class="compare-options" role="group" aria-labelledby="approach-label"><button type="button" data-approach="direct" aria-pressed="false">Direct answer</button><button type="button" data-approach="guided" aria-pressed="true">With Kangae</button></div></div>
+    </div>
+    <div class="compare-stage"><div class="compare-stage-top"><span id="compare-caption">RESPONSIVE GRID / WITH KANGAE</span><span>ILLUSTRATIVE EXCHANGE</span></div><div class="compare-messages" id="compare-messages" aria-live="polite" aria-atomic="true">
+      <div class="compare-message"><span>YOU</span><p>My grid overflows on mobile. Can you fix it?</p></div>
+      <div class="compare-message compare-assistant"><span>ASSISTANT</span><p>What do you expect the columns to do when the container gets smaller? Check the minimum track size first.</p></div>
+      <div class="compare-message"><span>YOU</span><p>The minimum might be keeping the tracks too wide. I can inspect that in DevTools.</p></div>
+      <div class="compare-message compare-assistant"><span>ASSISTANT</span><p>Exactly. Try reducing the minimum and compare the layout at 320px. What changes?</p></div>
+    </div><div class="compare-stage-foot" id="compare-takeaway">You practice identifying the constraint before choosing the fix.</div></div>
+  </div>
+  <p class="compare-note">Kangae is guidance for your existing AI assistant, not a separate model. The best approach depends on your goal: learning, shipping, or reviewing.</p>
+</section>
+<script>
+  const examples = {
+    grid: {
+      title: 'RESPONSIVE GRID',
+      direct: {
+        messages: [
+          ['YOU', 'My grid overflows on mobile. Can you fix it?'],
+          ['ASSISTANT', 'Try grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); and check the container width.'],
+        ],
+        takeaway: 'You get a possible fix quickly, but may not understand what caused the overflow.'
+      },
+      guided: {
+        messages: [
+          ['YOU', 'My grid overflows on mobile. Can you fix it?'],
+          ['ASSISTANT', 'What do you expect the columns to do when the container gets smaller? Check the minimum track size first.'],
+          ['YOU', 'The minimum might be keeping the tracks too wide. I can inspect that in DevTools.'],
+          ['ASSISTANT', 'Exactly. Try reducing the minimum and compare the layout at 320px. What changes?'],
+        ],
+        takeaway: 'You practice identifying the constraint before choosing the fix.'
+      }
+    },
+    bug: {
+      title: 'DEBUG A FUNCTION',
+      direct: {
+        messages: [
+          ['YOU', 'My total is wrong when the cart has no items. Can you fix it?'],
+          ['ASSISTANT', 'Use items.reduce((sum, item) => sum + item.price, 0). The initial value of 0 handles an empty array.'],
+        ],
+        takeaway: 'The answer is ready to use, but the underlying reduce behavior may remain unclear.'
+      },
+      guided: {
+        messages: [
+          ['YOU', 'My total is wrong when the cart has no items. Can you fix it?'],
+          ['ASSISTANT', 'What value should an empty cart return? What does reduce do if you leave out its initial value?'],
+          ['YOU', 'It should return zero. I think reduce has no starting value on an empty array.'],
+          ['ASSISTANT', 'Test that hypothesis with an empty array, then try an explicit initial value. What do you notice?'],
+        ],
+        takeaway: 'You investigate the edge case and learn why an initial value matters.'
+      }
+    }
+  };
+  const comparison = document.querySelector('[data-comparison]');
+  if (comparison) {
+    let scenario = 'grid';
+    let approach = 'guided';
+    const render = () => {
+      const example = examples[scenario];
+      const content = example[approach];
+      comparison.querySelectorAll('[data-scenario]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.scenario === scenario)));
+      comparison.querySelectorAll('[data-approach]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.approach === approach)));
+      const caption = comparison.querySelector('#compare-caption');
+      const messages = comparison.querySelector('#compare-messages');
+      const takeaway = comparison.querySelector('#compare-takeaway');
+      if (caption) caption.textContent = example.title + ' / ' + (approach === 'guided' ? 'WITH KANGAE' : 'DIRECT ANSWER');
+      if (messages) {
+        messages.replaceChildren();
+        content.messages.forEach(([speaker, line]) => {
+          const message = document.createElement('div');
+          message.className = 'compare-message' + (speaker === 'ASSISTANT' ? ' compare-assistant' : '');
+          const label = document.createElement('span');
+          label.textContent = speaker;
+          const paragraph = document.createElement('p');
+          paragraph.textContent = line;
+          message.append(label, paragraph);
+          messages.append(message);
+        });
+      }
+      if (takeaway) takeaway.textContent = content.takeaway;
+    };
+    comparison.querySelectorAll('[data-scenario]').forEach((button) => button.addEventListener('click', () => { scenario = button.dataset.scenario; render(); }));
+    comparison.querySelectorAll('[data-approach]').forEach((button) => button.addEventListener('click', () => { approach = button.dataset.approach; render(); }));
+  }
+</script>
+<section class="wrap section-pad learning-distinction" aria-labelledby="learning-distinction-title">
+  <div class="section-top"><span class="section-tag">04 / WHERE KANGAE FITS</span><span class="tiny">DIFFERENT TOOLS, SHARED GOALS</span></div>
+  <div class="distinction-heading"><h2 id="learning-distinction-title">Not another<br /><em>learning mode.</em></h2><p>Learning-oriented AI tools and Kangae share an important goal: keeping you involved. The difference is less about asking questions and more about where the practice lives, and what you bring with you.</p></div>
+  <div class="distinction-grid">
+    <article><span class="number">BUILT-IN EXPERIENCE</span><h3>AI learning modes &amp; plugins</h3><p>Features such as ChatGPT Study Mode or Claude Code's Learning Style plugin encourage guided thinking, explanations, and participation inside their respective products.</p><p class="distinction-foot">A useful choice when you want learning assistance in that tool.</p></article>
+    <article><span class="number">PORTABLE PRACTICE</span><h3>Kangae</h3><p>A set of readable Markdown instructions you keep alongside your work. It offers reusable practices for understanding code, debugging, reviewing, experimenting, and reflecting—without requiring a dedicated AI model or app.</p><p class="distinction-foot">A useful choice when you want to carry your working principles between projects and compatible assistants.</p></article>
+  </div>
+  <p class="distinction-note">They can complement each other. Kangae does not guarantee identical behavior across assistants, and learning plugins may support hands-on coding too. What matters is choosing how much of the thinking you want to own.</p>
+  <div class="distinction-links"><a href="https://help.openai.com/en/articles/11780217-using-study-mode-in-chatgpt" target="_blank" rel="noopener noreferrer">About ChatGPT Study Mode ↗</a><a href="https://github.com/anthropics/claude-code/blob/main/plugins/learning-output-style/README.md" target="_blank" rel="noopener noreferrer">About Claude's Learning Style plugin ↗</a></div>
+</section>
+<section class="wrap section-pad"><div class="section-top"><span class="section-tag">05 / INSIDE KANGAE</span><span class="tiny">SMALL PARTS, OPTIONAL DEPTH</span></div><div class="principles"><article><span class="number">CORE</span><h3>Adaptive guidance</h3><p>Build, Study, and Review are contexts the assistant can move between naturally.</p></article><article><span class="number">SKILLS</span><h3>Reusable practices</h3><p>Understand code, debug, review, reconstruct, teach, and journal.</p></article><article><span class="number">OPTIONAL</span><h3>Structured reflection</h3><p>Use ICM stages or a learning domain when they add value, without making them mandatory.</p></article></div></section>
+<section class="wrap install-section"><div><span class="section-tag">06 / GET STARTED</span><h2>One folder.<br />Your existing tools.</h2><p>Copy the <code>.kangae/</code> folder into your project and point your AI assistant at its instructions. You can keep it local to your clone without editing shared team instructions.</p><a class="text-link" href="https://github.com/kalebberry/Kangae#how-to-use-kangae">Read the full setup guide ↗</a></div><div class="terminal"><div class="terminal-top">PROJECT STRUCTURE</div><pre><code>my-project/
 ├── .kangae/
 │   ├── KANGAE.md
 │   ├── skills/
@@ -14,5 +114,5 @@ import Layout from '../layouts/Layout.astro';
 │   └── icm/
 └── src/</code></pre><div class="terminal-top">TELL YOUR AI ASSISTANT</div><pre><code>Read .kangae/KANGAE.md and
 follow Kangae while we work.</code></pre></div></section>
-<section class="wrap closing"><span class="section-tag">05 / CONTINUE</span><h2>Stay curious.<br /><em>Stay involved.</em></h2><a class="button-dark" href="https://github.com/kalebberry/Kangae">Explore the source ↗</a></section>
+<section class="wrap closing"><span class="section-tag">07 / CONTINUE</span><h2>Stay curious.<br /><em>Stay involved.</em></h2><a class="button-dark" href="https://github.com/kalebberry/Kangae">Explore the source ↗</a></section>
 </Layout>
