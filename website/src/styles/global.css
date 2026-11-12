@@ -27,3 +27,22 @@
 .compare-note{color:#77756b;font-size:12px;max-width:65ch;margin-top:22px}
 @media(max-width:800px){.compare-intro,.compare-controls{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:640px){.compare-controls{padding:18px;gap:25px}.compare-options button{flex:1 1 auto}.compare-stage{padding:20px}.compare-assistant{padding-left:14px}}
+
+
+/* Product positioning: complement, rather than compete with, learning modes. */
+.learning-distinction{border-top:1px solid #d4d2c8}
+.distinction-heading{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:48px}
+.distinction-heading h2{font:500 clamp(36px,5vw,72px)/1.13 'Manrope',sans-serif;letter-spacing:-.06em;margin:0}
+.distinction-heading h2 em{font-style:normal;color:#99988e}
+.distinction-heading p{font-size:15px;color:#68665e;max-width:47ch}
+.distinction-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #cbc9bf;border-bottom:1px solid #cbc9bf}
+.distinction-grid article{padding:clamp(24px,3vw,44px) clamp(20px,4vw,55px) clamp(24px,3vw,44px) 0;min-width:0}
+.distinction-grid article+article{border-left:1px solid #cbc9bf;padding-left:clamp(20px,4vw,55px);padding-right:0}
+.distinction-grid h3{font:500 clamp(25px,3vw,40px)/1.18 'Manrope',sans-serif;letter-spacing:-.045em;margin:34px 0 18px}
+.distinction-grid p{font-size:14px;color:#6b695f;max-width:47ch}
+.distinction-grid .distinction-foot{color:#36362f;font-weight:600;font-size:12px;margin-top:28px}
+.distinction-note{font-size:13px;color:#77756b;max-width:85ch;margin-top:25px}
+.distinction-links{display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:20px}
+.distinction-links a{font-size:12px;color:#56544b;text-underline-offset:5px}
+@media(max-width:800px){.distinction-heading{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:640px){.distinction-grid{grid-template-columns:minmax(0,1fr)}.distinction-grid article{padding:25px 0}.distinction-grid article+article{border-left:0;border-top:1px solid #cbc9bf;padding:25px 0}.distinction-grid h3{margin-top:20px}}
