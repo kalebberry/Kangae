@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Your first Kangae session" description="A short, practical walkthrough for using Kangae in an existing project.">
+  <section class="wrap docs-hero">
+    <span class="section-tag">KANGAE / FIRST SESSION</span>
+    <h1>Start with<br /><em>one question.</em></h1>
+    <p>A small, realistic introduction to working with Kangae. No new app, team configuration, or rigid learning mode.</p>
+    <a class="text-link" href="/docs/">← All documentation</a>
+  </section>
+  <div class="wrap docs-shell">
+    <nav class="docs-nav" aria-label="First session sections">
+      <span class="section-tag">FOLLOW ALONG</span>
+      <a href="#prepare">01 / Prepare</a>
+      <a href="#begin">02 / Begin</a>
+      <a href="#investigate">03 / Investigate</a>
+      <a href="#finish">04 / Reflect</a>
+    </nav>
+    <article class="docs-content">
+      <section class="docs-block" id="prepare">
+        <span class="section-tag">01 / PREPARE</span>
+        <h2>Bring Kangae into your project.</h2>
+        <p>Copy the complete <code>.kangae/</code> directory from <a href="https://github.com/kalebberry/Kangae/tree/main/.kangae">the repository</a> to the root of a project you can edit. Preserve its internal structure.</p>
+        <pre><code>my-project/
+├── .kangae/
+│   └── KANGAE.md
+└── src/</code></pre>
+        <p>This abbreviated tree shows only the entry point; keep the other files too. In a team repository, you can use <code>.git/info/exclude</code> locally to avoid committing your personal copy. You do not need to modify <code>CLAUDE.md</code> or <code>AGENTS.md</code>.</p>
+      </section>
+      <section class="docs-block" id="begin">
+        <span class="section-tag">02 / BEGIN</span>
+        <h2>Give your assistant context.</h2>
+        <p>Open your AI coding assistant with access to your project, and start with a normal request:</p>
+        <blockquote>Read <code>.kangae/KANGAE.md</code> and follow its guidance. Help me understand why this component overflows on a narrow screen. Don't implement a fix yet.</blockquote>
+        <p>If your assistant cannot read local files, provide the protocol content through a supported method instead. Kangae itself does not install an assistant or grant file access.</p>
+      </section>
+      <section class="docs-block" id="investigate">
+        <span class="section-tag">03 / INVESTIGATE</span>
+        <h2>Stay involved in the reasoning.</h2>
+        <p>Suppose a grid spills beyond a 320px viewport. Ask the assistant to help identify what to inspect first: the parent width, track minimums, and content that refuses to shrink.</p>
+        <pre><code>grid-template-columns: repeat(3, minmax(16rem, 1fr));</code></pre>
+        <p>Predict what happens when three minimum tracks cannot fit. Use browser DevTools to confirm the overflow. Only then discuss alternatives, such as responsive column counts or flexible track sizing. The correct fix depends on the layout.</p>
+        <p>Need more help? Say <strong>“Hint”</strong> or <strong>“I'm lost.”</strong> Ready to take over? Say <strong>“Let me try.”</strong> In a hurry? <strong>“Just show me”</strong> is allowed.</p>
+      </section>
+      <section class="docs-block" id="finish">
+        <span class="section-tag">04 / REFLECT</span>
+        <h2>Leave with a reusable insight.</h2>
+        <p>After testing your change, explain what caused the overflow and why your fix works. Optionally use <a href="https://github.com/kalebberry/Kangae/blob/main/.kangae/JOURNAL-TEMPLATE.md">the journal template</a> to capture the hypothesis, evidence, and lesson.</p>
+        <p class="docs-note">The dialogue above is an illustrative walkthrough, not a guarantee that every assistant will behave identically. You remain responsible for verifying the result.</p>
+        <a class="text-link" href="/docs/workflows/">Explore Build, Study &amp; Review examples →</a>
+      </section>
+    </article>
+  </div>
+</Layout>
