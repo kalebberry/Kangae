@@ -1,0 +1,15 @@
+{
+  "name": "kangae-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "@astrojs/check": "^0.9.0",
+    "typescript": "^5.0.0"
+  }
+}
