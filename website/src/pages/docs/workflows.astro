@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Workflow Examples — Kangae" description="Practical examples of Build, Study, and Review with Kangae.">
+  <section class="wrap docs-hero">
+    <span class="section-tag">KANGAE / FIELD GUIDE</span>
+    <h1>Practice over<br /><em>autopilot.</em></h1>
+    <p>Illustrative prompts you can adapt to your own projects. These are examples, not transcripts from a live assistant.</p>
+    <a class="text-link" href="/docs/">← Documentation overview</a>
+  </section>
+  <div class="wrap docs-shell">
+    <nav class="docs-nav" aria-label="Workflow examples">
+      <span class="section-tag">EXAMPLES</span>
+      <a href="#build">01 / Build</a>
+      <a href="#study">02 / Study</a>
+      <a href="#review">03 / Review</a>
+      <a href="#skills">04 / Skills &amp; reflection</a>
+    </nav>
+    <article class="docs-content">
+      <section class="docs-block" id="build">
+        <span class="section-tag">01 / BUILD</span>
+        <h2>Debug a responsive layout.</h2>
+        <p><strong>You:</strong> “This grid overflows at 320px. Help me understand why before we change the CSS.”</p>
+        <p><strong>Possible response:</strong> “Let's inspect the minimum column size and the width of the parent. What do you predict happens when the container shrinks?”</p>
+        <p><strong>Your next step:</strong> Test the hypothesis in DevTools, compare widths, then decide whether to change the track sizing or its container.</p>
+        <p class="docs-note">When you already understand the problem or need speed, you can ask for a direct fix.</p>
+      </section>
+      <section class="docs-block" id="study">
+        <span class="section-tag">02 / STUDY</span>
+        <h2>Learn through a prediction.</h2>
+        <p><strong>You:</strong> “Help me understand JavaScript reduce. Give me a small example to predict before explaining.”</p>
+        <p><strong>Possible response:</strong> “What do you expect <code>[2, 3].reduce((a, b) =&gt; a + b, 0)</code> to return? What would change with an empty array?”</p>
+        <p><strong>Your next step:</strong> Predict, run the example, explain the initial value in your own words, and ask for a stronger hint only if needed.</p>
+      </section>
+      <section class="docs-block" id="review">
+        <span class="section-tag">03 / REVIEW</span>
+        <h2>Use AI feedback as evidence.</h2>
+        <p><strong>You:</strong> “Review this pull request for correctness and accessibility. Separate confirmed issues from preferences, and show evidence for each concern.”</p>
+        <p><strong>Possible response:</strong> “I'll identify risks, cite the relevant code, and suggest checks. Let's verify the highest-impact finding before changing anything.”</p>
+        <p><strong>Your next step:</strong> Reproduce issues, assess tradeoffs, and keep final judgment with the developer.</p>
+      </section>
+      <section class="docs-block" id="skills">
+        <span class="section-tag">04 / GO FURTHER</span>
+        <h2>Reusable, not mandatory.</h2>
+        <p>Kangae includes workflows for understanding unfamiliar code, debugging, reviewing, reconstructing, teaching, and journaling. Natural-language requests can activate those practices without memorizing command names.</p>
+        <p>The optional ICM workspace follows <strong>Understand → Think → Attempt → Test → Review → Reflect</strong>, but is not a required pipeline. Use it when visible checkpoints would help.</p>
+        <p>After meaningful work, consider writing a brief journal entry about what you thought, tested, learned, and would revisit.</p>
+        <a class="text-link" href="https://github.com/kalebberry/Kangae/tree/main/.kangae/skills">Browse the skills ↗</a>
+      </section>
+    </article>
+  </div>
+</Layout>
