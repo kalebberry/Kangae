@@ -7,7 +7,7 @@ const current = Astro.url.pathname;
 <html lang="en">
 <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" content={description} /><meta name="theme-color" content="#f7f6f2" /><title>{title}</title></head>
 <body>
-  <header class="site-header wrap"><a class="brand" href="/" aria-label="Kangae home"><span class="brand-kanji">考え</span><span>KANGAE</span></a><nav aria-label="Main navigation"><a aria-current={current === '/' ? 'page' : undefined} href="/">Overview</a><a aria-current={current.startsWith('/product') ? 'page' : undefined} href="/product/">The workflow</a><a href="https://github.com/kalebberry/Kangae#how-to-use-kangae">Get started <span aria-hidden="true">↗</span></a></nav></header>
+  <header class="site-header wrap"><a class="brand" href="/" aria-label="Kangae home"><span class="brand-kanji">考え</span><span>KANGAE</span></a><nav aria-label="Main navigation"><a aria-current={current === '/' ? 'page' : undefined} href="/">Overview</a><a aria-current={current.startsWith('/product') ? 'page' : undefined} href="/product/">The workflow</a><a aria-current={current.startsWith('/docs') ? 'page' : undefined} href="/docs/">Docs</a><a href="https://github.com/kalebberry/Kangae#how-to-use-kangae">Get started <span aria-hidden="true">↗</span></a></nav></header>
   <main><slot /></main>
   <footer class="site-footer wrap"><div><span class="brand-kanji">考え</span><p>Think with AI, not through AI.</p></div><div class="footer-links"><a href="https://github.com/kalebberry/Kangae">GitHub ↗</a><a href="https://eien.studio">A project by Studio Eien ↗</a></div><small>Made for the thinking that matters.</small></footer>
 </body></html>
