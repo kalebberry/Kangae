@@ -22,7 +22,13 @@ import Layout from '../../layouts/Layout.astro';
         <h2>Debug a responsive layout.</h2>
         <p><strong>You:</strong> “This grid overflows at 320px. Help me understand why before we change the CSS.”</p>
         <p><strong>Possible response:</strong> “Let's inspect the minimum column size and the width of the parent. What do you predict happens when the container shrinks?”</p>
-        <p><strong>Your next step:</strong> Test the hypothesis in DevTools, compare widths, then decide whether to change the track sizing or its container.</p>
+        <pre><code>.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(16rem, 1fr));
+}</code></pre>
+        <p><strong>Observe:</strong> Three 16rem minimum tracks require at least 48rem before gaps. A 320px viewport cannot contain them.</p>
+        <p><strong>Test:</strong> Inspect the grid's computed track sizes in DevTools at 320px and at desktop width. Try a single-column mobile rule, then confirm the intended card layout remains readable.</p>
+        <p><strong>Transfer:</strong> Ask yourself why <code>minmax(0, 1fr)</code> changes shrink behavior but does not automatically solve every content overflow.</p>
         <p class="docs-note">When you already understand the problem or need speed, you can ask for a direct fix.</p>
       </section>
       <section class="docs-block" id="study">
@@ -30,14 +36,22 @@ import Layout from '../../layouts/Layout.astro';
         <h2>Learn through a prediction.</h2>
         <p><strong>You:</strong> “Help me understand JavaScript reduce. Give me a small example to predict before explaining.”</p>
         <p><strong>Possible response:</strong> “What do you expect <code>[2, 3].reduce((a, b) =&gt; a + b, 0)</code> to return? What would change with an empty array?”</p>
-        <p><strong>Your next step:</strong> Predict, run the example, explain the initial value in your own words, and ask for a stronger hint only if needed.</p>
+        <pre><code>const total = [2, 3].reduce((sum, value) =&gt; sum + value, 0);
+const empty = [].reduce((sum, value) =&gt; sum + value, 0);</code></pre>
+        <p><strong>Predict:</strong> What do <code>total</code> and <code>empty</code> contain? What happens if the second <code>reduce</code> call omits the initial <code>0</code>?</p>
+        <p><strong>Test:</strong> Run all three cases in a console. Explain why an initial accumulator matters for empty collections.</p>
       </section>
       <section class="docs-block" id="review">
         <span class="section-tag">03 / REVIEW</span>
         <h2>Use AI feedback as evidence.</h2>
         <p><strong>You:</strong> “Review this pull request for correctness and accessibility. Separate confirmed issues from preferences, and show evidence for each concern.”</p>
         <p><strong>Possible response:</strong> “I'll identify risks, cite the relevant code, and suggest checks. Let's verify the highest-impact finding before changing anything.”</p>
-        <p><strong>Your next step:</strong> Reproduce issues, assess tradeoffs, and keep final judgment with the developer.</p>
+        <pre><code>// Proposed change
+button.addEventListener('click', () =&gt; {
+  dialog.classList.add('is-open');
+});</code></pre>
+        <p><strong>Investigate:</strong> Does the dialog receive focus? Can it be dismissed with Escape? Is focus restored to the trigger? These are review questions, not confirmed defects without examining the rest of the implementation.</p>
+        <p><strong>Verify:</strong> Test keyboard-only behavior and inspect the full component before making a recommendation. Separate accessibility failures from style preferences.</p>
       </section>
       <section class="docs-block" id="skills">
         <span class="section-tag">04 / GO FURTHER</span>
