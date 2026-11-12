@@ -97,3 +97,13 @@ h1, h2, h3 { text-wrap: balance; }
 .docs-note{border-left:2px solid #aaa99e;padding-left:1rem}
 @media(max-width:56.25rem){.docs-shell{grid-template-columns:minmax(0,1fr)}.docs-nav{position:static;flex-direction:row;flex-wrap:wrap;gap:0.75rem 1.25rem;border-bottom:1px solid #d4d2c8;padding-bottom:1.5rem}.docs-nav .section-tag{flex-basis:100%;margin:0}}
 @media(max-width:40rem){.docs-cards{grid-template-columns:minmax(0,1fr)}.docs-hero h1{overflow-wrap:anywhere}.docs-block pre{padding:1rem}}
+
+
+/* Docs usability: preserve focus, prevent code samples from widening the viewport. */
+.docs-shell,.docs-content,.docs-block{min-width:0}
+.docs-block pre{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;white-space:pre;tab-size:2}
+.docs-block pre code{display:block;width:max-content;min-width:100%;overflow-wrap:normal;word-break:normal}
+.docs-nav a:focus-visible,.docs-content a:focus-visible,.site-header a:focus-visible{outline:2px solid currentColor;outline-offset:0.25rem}
+.docs-block:target{scroll-margin-top:1.5rem}
+@media(max-width:40rem){.docs-shell{gap:2rem}.docs-nav{gap:0.75rem 1rem}.docs-block pre{font-size:var(--type-body-sm)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
