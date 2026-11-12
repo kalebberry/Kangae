@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Documentation — Kangae" description="Install Kangae, work alongside existing team instructions, and explore its portable workflows.">
+  <section class="wrap docs-hero">
+    <span class="section-tag">KANGAE / DOCUMENTATION</span>
+    <h1>Make room<br /><em>for thinking.</em></h1>
+    <p>One portable folder, a few clear practices, and your existing AI assistant. Start small; use only the guidance that helps.</p>
+  </section>
+  <div class="wrap docs-shell">
+    <nav class="docs-nav" aria-label="Documentation sections">
+      <span class="section-tag">ON THIS PAGE</span>
+      <a href="#start">01 / Get started</a>
+      <a href="#team">02 / Work repositories</a>
+      <a href="#workflow">03 / Working with Kangae</a>
+      <a href="#reference">04 / Reference</a>
+      <a href="/docs/workflows/">Explore workflow examples ↗</a>
+    </nav>
+    <article class="docs-content">
+      <section id="start" class="docs-block">
+        <span class="section-tag">01 / GET STARTED</span>
+        <h2>Start with one folder.</h2>
+        <p>Copy the complete <code>.kangae/</code> folder from the <a href="https://github.com/kalebberry/Kangae">Kangae repository</a> into the root of the project where you want to use it. No service, account, or dedicated AI model is required.</p>
+        <pre><code>my-project/
+├── .kangae/
+│   ├── KANGAE.md
+│   ├── JOURNAL-TEMPLATE.md
+│   ├── skills/
+│   ├── domains/
+│   └── icm/
+└── src/</code></pre>
+        <p>Then tell your existing AI assistant:</p>
+        <blockquote>Read <code>.kangae/KANGAE.md</code> and follow Kangae while we work.</blockquote>
+        <p>Work normally. You can ask for hints, investigate together, or request direct implementation. Kangae is guidance, not an enforcement mechanism; results vary by assistant and context.</p>
+      </section>
+      <section id="team" class="docs-block">
+        <span class="section-tag">02 / WORK REPOSITORIES</span>
+        <h2>Keep team instructions intact.</h2>
+        <p>Kangae does not require editing a team's <code>CLAUDE.md</code>, <code>AGENTS.md</code>, or other shared instruction files. You can reference its entry point in your conversation instead.</p>
+        <p>To keep your personal <code>.kangae/</code> copy out of commits, add the following entry to your local clone's <code>.git/info/exclude</code> file:</p>
+        <pre><code>.kangae/</code></pre>
+        <p>Check <code>git status</code> before committing. This local exclude rule only applies to untracked files; it does not untrack anything already staged or committed. Follow your workplace's rules for using AI and local project files.</p>
+      </section>
+      <section id="workflow" class="docs-block">
+        <span class="section-tag">03 / THE PRACTICE</span>
+        <h2>Choose how involved you want to be.</h2>
+        <p>Kangae adapts across Build, Study, and Review. These are contexts, not modes you must switch manually. A session can move between them as your goal changes.</p>
+        <div class="docs-cards">
+          <a href="/docs/workflows/#build"><strong>Build</strong><span>Investigate a bug before choosing the fix.</span></a>
+          <a href="/docs/workflows/#study"><strong>Study</strong><span>Practice prediction and recall with support.</span></a>
+          <a href="/docs/workflows/#review"><strong>Review</strong><span>Question changes and verify evidence.</span></a>
+        </div>
+        <p>Simple conversational requests such as <strong>“Hint,” “Let me try,” “I'm lost,” “Just show me,”</strong> and <strong>“Implement it”</strong> help communicate how much assistance you want.</p>
+      </section>
+      <section id="reference" class="docs-block">
+        <span class="section-tag">04 / SOURCE REFERENCE</span>
+        <h2>Read the source of truth.</h2>
+        <p>The website introduces the practice. The Markdown files define the actual workflow and optional extensions.</p>
+        <ul>
+          <li><a href="https://github.com/kalebberry/Kangae/blob/main/.kangae/KANGAE.md">Core protocol — KANGAE.md ↗</a></li>
+          <li><a href="https://github.com/kalebberry/Kangae/tree/main/.kangae/skills">Reusable skills ↗</a></li>
+          <li><a href="https://github.com/kalebberry/Kangae/tree/main/.kangae/icm">Optional ICM stages ↗</a></li>
+          <li><a href="https://github.com/kalebberry/Kangae/tree/main/.kangae/domains/language-learning">Language learning domain ↗</a></li>
+          <li><a href="https://github.com/kalebberry/Kangae/blob/main/README.md">Complete README ↗</a></li>
+        </ul>
+      </section>
+    </article>
+  </div>
+</Layout>
