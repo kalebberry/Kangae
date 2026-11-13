@@ -1,0 +1,14 @@
+/* Kangae typography: rem-based, fluid, and responsive to browser font settings. */
+:root {
+  --type-xs: 0.6875rem;
+  --type-sm: 0.75rem;
+  --type-body-sm: 0.875rem;
+  --type-body: 1rem;
+  --type-body-lg: 1.0625rem;
+  --type-title-sm: 1.75rem;
+  --type-heading-sm: clamp(1.625rem, 1.25rem + 1.5vw, 2.6875rem);
+  --type-heading-lg: clamp(2.25rem, 1.75rem + 2.5vw, 4rem);
+  --type-heading-xl: clamp(2.375rem, 1.75rem + 3.25vw, 5rem);
+  --type-display: clamp(3rem, 2rem + 5vw, 8.25rem);
+  --measure-body: 65ch;
+}
