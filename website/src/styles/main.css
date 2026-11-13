@@ -1,0 +1,14 @@
+/* Kangae website CSS: 7–1-inspired architecture. Keep import order stable. */
+@import "./vendors/_fonts.css";
+@import "./abstracts/_tokens.css";
+@import "./base/_reset.css";
+@import "./layout/_header.css";
+@import "./components/_shared.css";
+@import "./pages/_home.css";
+@import "./layout/_footer.css";
+@import "./pages/_product.css";
+@import "./components/_comparison.css";
+@import "./pages/_product-positioning.css";
+@import "./pages/_docs.css";
+@import "./base/_accessibility.css";
+@import "./themes/_japanese.css";
