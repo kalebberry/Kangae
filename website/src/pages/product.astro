@@ -23,7 +23,11 @@ import Layout from '../layouts/Layout.astro';
   <p class="compare-note">Kangae is guidance for your existing AI assistant, not a separate model. The best approach depends on your goal: learning, shipping, or reviewing.</p>
 </section>
 <script>
-  const examples = {
+  type Scenario = 'grid' | 'bug';
+  type Approach = 'direct' | 'guided';
+  type Exchange = { messages: [string, string][]; takeaway: string };
+  type Example = { title: string; direct: Exchange; guided: Exchange };
+  const examples: Record<Scenario, Example> = {
     grid: {
       title: 'RESPONSIVE GRID',
       direct: {
@@ -65,13 +69,13 @@ import Layout from '../layouts/Layout.astro';
   };
   const comparison = document.querySelector('[data-comparison]');
   if (comparison) {
-    let scenario = 'grid';
-    let approach = 'guided';
+    let scenario: Scenario = 'grid';
+    let approach: Approach = 'guided';
     const render = () => {
       const example = examples[scenario];
       const content = example[approach];
-      comparison.querySelectorAll('[data-scenario]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.scenario === scenario)));
-      comparison.querySelectorAll('[data-approach]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.approach === approach)));
+      comparison.querySelectorAll<HTMLButtonElement>('[data-scenario]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.scenario === scenario)));
+      comparison.querySelectorAll<HTMLButtonElement>('[data-approach]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.approach === approach)));
       const caption = comparison.querySelector('#compare-caption');
       const messages = comparison.querySelector('#compare-messages');
       const takeaway = comparison.querySelector('#compare-takeaway');
@@ -91,8 +95,8 @@ import Layout from '../layouts/Layout.astro';
       }
       if (takeaway) takeaway.textContent = content.takeaway;
     };
-    comparison.querySelectorAll('[data-scenario]').forEach((button) => button.addEventListener('click', () => { scenario = button.dataset.scenario; render(); }));
-    comparison.querySelectorAll('[data-approach]').forEach((button) => button.addEventListener('click', () => { approach = button.dataset.approach; render(); }));
+    comparison.querySelectorAll<HTMLButtonElement>('[data-scenario]').forEach((button) => button.addEventListener('click', () => { const value = button.dataset.scenario; if (value === 'grid' || value === 'bug') { scenario = value; render(); } }));
+    comparison.querySelectorAll<HTMLButtonElement>('[data-approach]').forEach((button) => button.addEventListener('click', () => { const value = button.dataset.approach; if (value === 'direct' || value === 'guided') { approach = value; render(); } }));
   }
 </script>
 <section class="wrap section-pad learning-distinction" aria-labelledby="learning-distinction-title">
