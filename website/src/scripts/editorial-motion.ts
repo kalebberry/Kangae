@@ -34,24 +34,29 @@ export function initEditorialMotion(): void {
     "stagger": 0.09
   }
 ];
+    const context = gsap.context(() => {
     for (const { selector, rise, stagger } of groups) {
       const elements = gsap.utils.toArray<HTMLElement>(selector);
       if (!elements.length) continue;
       // Animate individually as elements enter the viewport; never conceal
       // content until its own animation begins.
       for (const element of elements) {
-        gsap.fromTo(element,
-          { autoAlpha: 0, y: rise },
-          {
-            autoAlpha: 1, y: 0, duration: 0.72, ease: 'power2.out',
-            delay: Math.min(elements.indexOf(element) * stagger, 0.36),
-            overwrite: 'auto',
-            scrollTrigger: { trigger: element, start: 'top 92%', once: true },
+        ScrollTrigger.create({
+          trigger: element,
+          start: 'top 92%',
+          once: true,
+          onEnter: () => {
+            gsap.fromTo(element, { autoAlpha: 0, y: rise }, {
+              autoAlpha: 1, y: 0, duration: 0.72, ease: 'power2.out',
+              delay: Math.min(elements.indexOf(element) * stagger, 0.36),
+              overwrite: 'auto',
+            });
           },
-        );
+        });
       }
     }
-    return () => { ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); };
+    });
+    return () => context.revert();
   });
   window.addEventListener('pagehide', () => media.revert(), { once: true });
 }
