@@ -1,0 +1,9 @@
+
+html { font-size: 100%; }
+body { overflow-wrap: break-word; }
+p { max-width: var(--measure-body); }
+h1, h2, h3 { text-wrap: balance; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+:root{font-family:'Space Grotesk',sans-serif;color:#24241f;background:#f7f6f2;font-synthesis:none}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}a{color:inherit}button,a{outline-offset:0.25rem}p{line-height:1.75}

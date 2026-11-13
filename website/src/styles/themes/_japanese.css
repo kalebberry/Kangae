@@ -1,0 +1,7 @@
+
+
+/* Studio Eien family: Japanese glyphs use WDXL Lubrifont JP N. */
+:lang(ja), .brand-kanji, .japanese {
+  font-family: 'WDXL Lubrifont JP N', sans-serif;
+  font-synthesis: none;
+}

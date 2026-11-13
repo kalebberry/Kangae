@@ -1,0 +1,28 @@
+
+
+/* Interactive comparison — client-side examples, no AI service required. */
+.compare-section{border-top:1px solid #d4d2c8}
+.compare-intro{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(1.5rem,5vw,5.625rem);align-items:end;margin-bottom:3rem}
+.compare-intro h2{font:500 var(--type-heading-xl)/1.13 'Familjen Grotesk',sans-serif;letter-spacing:-.06em;margin:0}
+.compare-intro h2 em{font-style:normal;color:#99988e}
+.compare-intro p{color:#68665e;max-width:46ch;font-size:var(--type-body-sm)}
+.compare-tool{border:1px solid #d3d0c6;background:#efede7;min-width:0}
+.compare-controls{display:grid;grid-template-columns:1fr 1fr;gap:1.875rem;padding:1.75rem;border-bottom:1px solid #d3d0c6}
+.compare-field{min-width:0}
+.compare-label{display:block;color:#77756b;font-size:var(--type-xs);font-weight:700;letter-spacing:.14em;margin-bottom:0.9375rem}
+.compare-options{display:flex;flex-wrap:wrap;gap:0.5rem}
+.compare-options button{border:1px solid #c4c0b5;background:transparent;color:#514f48;padding:0.75rem 1rem;min-height:2.75rem;font:600 0.75rem 'Space Grotesk',sans-serif;cursor:pointer}
+.compare-options button:hover{border-color:#25251f}
+.compare-options button[aria-pressed=true]{background:#25251f;border-color:#25251f;color:#fff}
+.compare-options button:focus-visible{outline:2px solid #25251f;outline-offset:0.1875rem}
+.compare-stage{background:#25251f;color:#f5f3eb;padding:clamp(1.375rem,4vw,2.875rem);min-width:0}
+.compare-stage-top{display:flex;justify-content:space-between;gap:1.25rem;flex-wrap:wrap;border-bottom:1px solid #525149;padding-bottom:1.125rem;font-size:var(--type-xs);letter-spacing:.13em;color:#aaa99e}
+.compare-messages{max-width:48.75rem;margin:0.625rem 0 1.875rem}
+.compare-message{padding:1.25rem 0;border-bottom:1px solid #46453e}
+.compare-message span{display:block;font-size:var(--type-xs);font-weight:700;letter-spacing:.14em;color:#aaa99e}
+.compare-message p{font-size:clamp(var(--type-body-sm),1.5vw,var(--type-body-lg));line-height:1.65;margin:0.625rem 0 0;color:#eeeae0;overflow-wrap:anywhere}
+.compare-assistant{border-left:2px solid #b0ac9e;padding-left:1.25rem}
+.compare-stage-foot{font-size:var(--type-sm);color:#d5d1c6;line-height:1.7;border-top:1px solid #525149;padding-top:1.25rem}
+.compare-note{color:#77756b;font-size:var(--type-sm);max-width:65ch;margin-top:1.375rem}
+@media(max-width:50rem){.compare-intro,.compare-controls{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:40rem){.compare-controls{padding:1.125rem;gap:1.5625rem}.compare-options button{flex:1 1 auto}.compare-stage{padding:1.25rem}.compare-assistant{padding-left:0.875rem}}
