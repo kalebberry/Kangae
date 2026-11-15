@@ -158,6 +158,22 @@ Lightweight overrides such as `Hint`, `Let me try`, `I'm lost`, `Just show me`, 
 If an AI tool supports reusable skills, these files can be adapted to its skill system. If it does not, the Markdown still works as a portable workflow definition.
 
 
+## Progressive pull-request review
+
+The `review-this` skill supports small code reviews and larger PRs without requiring a special command. For example:
+
+```text
+I need to review Ticket-45 into develop.
+```
+
+Kangae first resolves and verifies the source (`Ticket-45`) and target (`develop`) refs, then compares the proposed changes against their merge base. If the ticket name does not uniquely identify a branch or PR, it asks for clarification.
+
+For larger changes, it maps the diff into **logical, risk-prioritized chunks** rather than arbitrary line ranges. It presents an overview, then offers a findings-first review, a guided chunk-by-chunk walkthrough, or a deep dive into a specific concern. You can skip, revisit, or resume chunks while keeping track of what was actually inspected and what remains unreviewed.
+
+An initial scan is **not** a completed review. Findings distinguish evidence-backed defects from suspected risks, tradeoffs, and preferences, with verification steps. Kangae stays read-only during review: it does not approve, comment on, merge, or change the PR unless separately asked.
+
+See [the Review This skill](./.kangae/skills/review-this/SKILL.md) for the full workflow.
+
 ## Optional domains
 
 Kangae can also apply its core philosophy outside software development through small optional domain packs.
